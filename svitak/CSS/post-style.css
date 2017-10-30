@@ -1,0 +1,160 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+header,
+footer {
+	background-color: rgb(25,62,29);
+}
+
+.heading {
+	font-family: "Franklin Gothic Medium", "Arial Black";
+	font-size: 47px;
+	color: rgb(25,62,29);
+	margin-bottom: 0;
+}
+
+span {
+	font-weight: bold;
+	color: rgb(25,62,29);
+}
+
+.subheading {
+	font-family:Garamond, Georgia, serif;
+	font-size: 23px;
+	color: rgb(25,62,29);
+}
+
+p,
+time {
+	font-family:Garamond, Georgia, serif;
+	font-size: 18px;
+	color: rgb(88, 89, 91);
+	line-height: 1.5;
+}
+
+
+.news-image-main {
+	width: 100%;
+}
+
+.news-info {
+	display: flex;
+	align-items: center;
+}
+
+.news-info p {
+	padding-right: 16px;
+} 
+
+article {
+	width: 50%;
+	margin-left: 20%;
+}
+
+.logo-footer {
+		width: 70px;
+		margin-left: 1em;
+	}
+
+.f-container {
+	display: flex;
+	align-items: center;
+	margin-top: 2em;
+}
+
+.second-nav {
+	display: flex;
+	list-style: none;
+	color: white;
+	font-family: "Franklin Gothic Book", arial;
+}
+
+.second-nav li {
+	padding-right: 2em;
+	font-size: 1,5em;
+}
+
+.logo-header {
+		width: 100px;
+		margin-left: 1em;
+	}
+
+/*navigation*/
+.main-nav {
+	text-align: right;
+	font-family: "Franklin Gothic", arial;
+}
+
+.links a {
+	text-decoration: none;
+	color: white;
+	margin-right: 2em;
+	font-size: 1.5em;
+}
+
+.h-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+label {
+ 	margin-right: 2em;
+ 	font-size: 1.5em;
+ 	display: none;
+}
+
+#toggle {
+	display: none;
+}
+
+/*this is for small screens*/
+@media only screen and (max-width: 900px) {
+
+	article {
+		width: 90%;
+		margin-left: 5%;
+	}
+
+/*atempt at hamburger menu*/
+	header {
+		position: fixed;
+		width: 100%;
+		z-index: 100;
+		top: 0;
+	}
+
+	.news-card-main {
+		margin-top: 80px;
+	}
+	
+	label {
+		display: block;
+		cursor: pointer;
+		color: white;
+	}
+
+	.links {
+		display: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	.links a {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1.5em;
+		width: 100%;
+	}
+
+	#toggle:checked + .links {
+		display: block;
+	}
+
+}

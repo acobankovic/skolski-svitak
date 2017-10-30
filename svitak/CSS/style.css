@@ -1,0 +1,220 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+}
+
+header,
+footer {
+	background-color: rgb(25,62,29);
+}
+
+
+.logo-footer {
+		width: 70px;
+		margin-left: 1em;
+	}
+
+.f-container {
+	display: flex;
+	align-items: center;
+	margin-top: 1em;
+}
+
+.second-nav {
+	display: flex;
+	list-style: none;
+	color: white;
+	font-family: "Franklin Gothic Book", arial;
+}
+
+.second-nav li {
+	padding-right: 2em;
+	font-size: 1,5em;
+}
+
+.news-title {
+		font-family: "Franklin Gothic Medium", "Arial Black";
+		font-size: 2em;
+		padding-bottom: 0;
+		margin-bottom: 0;
+
+}
+
+.news-author {
+		font-family: "Franklin Gothic Book", arial;
+		font-style: italic;
+		font-size: 1em;
+		padding-top: 0;
+		margin-top: 0;
+}
+
+.logo-header {
+		width: 100px;
+		margin-left: 1em;
+	}
+
+.news-image-main {
+		max-width: 100%;
+		position: relative; 
+		z-index: -20;
+}
+
+
+.news-text-main {
+		position: absolute;
+		bottom: 0%;
+		left: 5%;	
+		color: white;
+		font-size: 2em;
+		padding: 0;
+}
+
+.news-card-main {
+	background: rgba(248,80,50,0);
+	background: -moz-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(172,74,43,0) 34%, rgba(25,62,29,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,0)), color-stop(34%, rgba(172,74,43,0)), color-stop(100%, rgba(25,62,29,1)));
+	background: -webkit-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(172,74,43,0) 34%, rgba(25,62,29,1) 100%);
+	background: -o-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(172,74,43,0) 34%, rgba(25,62,29,1) 100%);
+	background: -ms-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(172,74,43,0) 34%, rgba(25,62,29,1) 100%);
+	background: linear-gradient(to bottom, rgba(248,80,50,0) 0%, rgba(172,74,43,0) 34%, rgba(25,62,29,1) 100%);
+}
+
+/*navigation*/
+.main-nav {
+	text-align: right;
+	font-family: "Franklin Gothic", arial;
+}
+
+.links a {
+	text-decoration: none;
+	color: white;
+	margin-right: 2em;
+	font-size: 1.5em;
+}
+
+.h-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+label {
+ 	margin-right: 2em;
+ 	font-size: 1.5em;
+ 	display: none;
+}
+
+#toggle {
+	display: none;
+}
+
+
+
+/*this is for small screens*/
+@media only screen and (max-width: 900px) {
+
+	.logo-header {
+		width: 70px;
+		margin-left: 1em;
+	}
+
+	/*atempt at hamburger menu*/
+	header {
+		position: fixed;
+		width: 100%;
+		z-index: 100;
+		top: 0;
+	}
+
+	.news-card-main {
+		margin-top: 80px;
+	}
+	
+	label {
+		display: block;
+		cursor: pointer;
+		color: white;
+	}
+
+	.links {
+		display: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	.links a {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1.5em;
+		width: 100%;
+	}
+
+	#toggle:checked + .links {
+		display: block;
+	}
+
+
+	.news-image {
+		max-width: 100%;
+		position: relative; 
+		z-index: -20;
+	}
+
+	.news-card-main,
+	.news-card {
+		position: relative;
+		margin-bottom: 0.5em;
+	}
+
+	.news-text {
+		position: absolute;
+		color: white;
+		bottom: 10%;
+		left: 5%;	
+	}
+
+	.news-section {
+		display: none;
+	}
+}
+
+/*this is for large screens*/
+@media only screen and (min-width: 901px) {
+	.news-card {
+		width: 31%;
+		margin: 0.5em;
+		border: 1px solid #EAEAEB;
+		border-radius: 5px;
+	}
+
+	.news-container .news-image {
+		width: 100%;
+		border-radius: 5px 5px 0 0; 
+	}
+
+	.news-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.news-text {
+		padding-left: 1em;
+		padding-bottom: 1em;
+		color: rgb(26, 23, 24);
+	}
+
+	.news-section h1 {
+		font-family: "Franklin Gothic Medium", "Arial Black";
+		font-size: 2em;
+		margin-left: 1em; 
+	
+	}
+}
+
+
+
+
